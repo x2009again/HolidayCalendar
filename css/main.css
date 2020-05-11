@@ -26,6 +26,15 @@ body {
 .main .help:hover {
     opacity: 0.8;
 }
+#btnToday{
+    border-radius:5px 5px 5px 5px;
+    border:1px solid #28B452;
+    margin:0 auto;
+    background-color: #28B452;
+    color: #fff;
+    font-weight: 400;
+    cursor: pointer;
+}
 .sel-box {
     text-align: center;
     margin: 10px 0 20px;
@@ -44,11 +53,17 @@ body {
     text-align: center;
     cursor: pointer;
 }
-.sel-box .btn.btn-pre {
+.sel-box .btn.btn-preYear {
     left: 10px;
 }
-.sel-box .btn.btn-next {
+.sel-box .btn.btn-nextYear {
     right: 10px;
+}
+.sel-box .btn.btn-preMonth {
+    left: 40px;
+}
+.sel-box .btn.btn-nextMonth {
+    right: 40px;
 }
 .sel-box .btn:hover {
     color: #07f;
@@ -107,7 +122,7 @@ body {
     color: #f00!important;
 }
 
-.table > div.holiday, .table > div.work {
+.table > div.holiday, .table > div.work,.table > div.weeknum {
     position: relative;
 }
 .table > div.holiday:before, .table > div.work:before {
@@ -133,6 +148,17 @@ body {
     content: '班';
     background-color: #888;
 }
+.table > div.weeknum span{
+    position:absolute;
+    top:0px;
+    right:0px;
+    font-size: 10px !important;
+    background-color: #888;
+    color: #fff;
+    width:14px;
+    /* padding: 0 2px; */
+    border-radius: 50%;
+}
 .table > div.holiday.disabled:before,
 .table > div.work.disabled:before {
     background-color: #ddd;
@@ -140,6 +166,9 @@ body {
 .table > div.disabled,
 .table > div.disabled p:last-child {
     color: #ddd;
+}
+.tb-list{
+    min-height: 243px; 
 }
 
 .foot {

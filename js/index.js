@@ -19,6 +19,8 @@ $(function () {
                 result = true;
                 resolve("已经有节假日数据了");
             }
+            else if (localStorage.getItem('_HolidayCalendar_data') != "undefined") {
+            }
             else {
                 console.log("调用接口");
                 axios({

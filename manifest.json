@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "name": "节假日日历",
-  "version": "1.4",
-  "description": "节假日日历插件, 自动更新2018年后的节假日，参考https://github.com/gyxing/calendar.crx",
+  "version": "1.5",
+  "description": "节假日日历插件, 自动更新2020年后的节假日，参考https://github.com/gyxing/calendar.crx",
   "icons": {
     "16": "images/icon16.png",
     "32": "images/icon32.png",

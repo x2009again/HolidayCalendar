@@ -167,9 +167,6 @@ body {
 .table > div.disabled p:last-child {
     color: #ddd;
 }
-.tb-list{
-    min-height: 243px; 
-}
 
 .foot {
     padding: 8px 0 4px 0;

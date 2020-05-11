@@ -1,8 +1,4 @@
 $(function () {
-    if (window.hasRun) {
-        return;
-    }
-    window.hasRun = true;
 
     var $list = $('#tb-list');//, $curMonth = $('#cur-month');
     var $curYear = $("#curYear");//获取年下拉控件
@@ -63,43 +59,8 @@ $(function () {
                         reject("获取节假日信息出错，请联系开发人员处理");
                         console.log("错误2");
                     });
-                // $.ajax({
-                //     url: 'http://timor.tech/api/holiday/year/' + year,
-                //     dataType: "json",
-                //     timeout: 1000,
-                //     async: false,
-                //     success: function (data) {
-                //         if (data.code == 0) {
-                //             var worktime = {};
-                //             worktime["y" + curDate.getFullYear()] = {};
-                //             var hasData = false;
-                //             Object.keys(data.holiday).forEach(function (key) {
-                //                 hasData = true;
-                //                 if (data.holiday[key].holiday == true)//true表示是节假日，false表示是调休
-                //                 {
-                //                     worktime["y" + curDate.getFullYear()]["d" + key.replace("-", "")] = 2;
-
-                //                 } else {
-                //                     worktime["y" + curDate.getFullYear()]["d" + key.replace("-", "")] = 1;
-                //                 }
-                //             });
-                //             if (hasData) {
-                //                 window.HolidayCalendar.setWorktime(worktime);//0无特殊安排，1工作，2放假
-                //                 curYearHoliday = worktime;
-                //             }
-                //             result = true;
-                //         }
-                //         else {
-                //             result = false;
-
-                //         }
-                //     },
-                //     error: function () {
-                //         result = false;
-                //     }
-                // });
+               
             }
-            // return result;
         });
     }
     if (navigator.onLine) {
@@ -107,16 +68,8 @@ $(function () {
             localStorage.setItem('_HolidayCalendar_data', JSON.stringify(curYearHoliday));
             // setMonth(curDate.getFullYear(), curDate.getMonth());
         }).catch((error) => {
-            alert(error);
+            console.log(error);
         });
-        // if (getHoliday(curDate.getFullYear())) {
-        //     localStorage.setItem('_HolidayCalendar_data', JSON.stringify(curYearHoliday));
-        //     setMonth(curDate.getFullYear(), curDate.getMonth());
-        // }
-        // else {
-        //     alert("获取节假日信息出错，请联系开发人员处理！");
-        // }
-
     }
 
     // 从缓存获取数据
@@ -163,13 +116,8 @@ $(function () {
             getHoliday(year).then((message) => {
 
             }).catch((error) => {
-                alert(error);
+                console.log(error);
             });
-            // if (getHoliday(year)) {
-            // }
-            // else {
-            //     alert("获取节假日信息出错，请联系开发人员处理！");
-            // }
         }
         var curWeeks = getWeeks(year, month);//划分一个月中的周期
         //设置月历面板列表

@@ -57,7 +57,7 @@ $(function () {
                         }
                     })
                     .catch(function (error) {
-                        debugger;
+                        // debugger;
                         console.log(error);
                         result = false;
                         reject("获取节假日信息出错，请联系开发人员处理");

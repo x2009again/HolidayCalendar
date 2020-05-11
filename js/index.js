@@ -15,6 +15,10 @@ $(function () {
                 result = true;
                 resolve("已经有节假日数据了");
             }
+            else if (localStorage.getItem('_HolidayCalendar_data') != "undefined") {//有缓存数据
+                var cacheData = JSON.parse(localStorage.getItem('_HolidayCalendar_data'));
+                curYearHoliday = cacheData;
+            }
             else {
                 console.log("调用接口");
                 axios({
@@ -59,7 +63,7 @@ $(function () {
                         reject("获取节假日信息出错，请联系开发人员处理");
                         console.log("错误2");
                     });
-               
+
             }
         });
     }

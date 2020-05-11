@@ -1,5 +1,6 @@
 # calendar.crx
 中国节假日日历插件, 自动更新2018年后的节假日，应chrome上网友要求增加了周数显示。
+默认主分支为Firefox版，Chrome版本为chrome分支
 
 Firefox安装地址：https://addons.mozilla.org/zh-CN/firefox/addon/%E8%8A%82%E5%81%87%E6%97%A5%E6%97%A5%E5%8E%86/ 
 Chrome安装地址：https://chrome.google.com/webstore/detail/%E8%8A%82%E5%81%87%E6%97%A5%E6%97%A5%E5%8E%86/nbnocjjjcabknnadklnobhnlnlbgcfnj

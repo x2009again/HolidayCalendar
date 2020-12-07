@@ -28,7 +28,7 @@ $(function () {
                     url: 'http://timor.tech/api/holiday/year/' + year,
                     timeout: 1000
                 })
-                    .then(function (data) {
+                    .then(function ({data}) {
                         console.log(data);
                         if (data.code == 0) {
                             var worktime = {};
@@ -118,14 +118,23 @@ $(function () {
         $curMonth.val(month + 1);
         if (!hasHoliday && (year <= now.getFullYear() + 1)) {
             getHoliday(year).then((message) => {
-
+                var curWeeks = getWeeks(year, month);//划分一个月中的周期
+                //设置月历面板列表
+                setList(curWeeks, year);
             }).catch((error) => {
                 console.log(error);
+                var curWeeks = getWeeks(year, month);//划分一个月中的周期
+                //设置月历面板列表
+                setList(curWeeks, year);
             });
         }
-        var curWeeks = getWeeks(year, month);//划分一个月中的周期
-        //设置月历面板列表
-        setList(curWeeks, year);
+        else
+        {
+            var curWeeks = getWeeks(year, month);//划分一个月中的周期
+            //设置月历面板列表
+            setList(curWeeks, year);
+        }
+      
     }
     //初始化下拉
     function initSelect() {
